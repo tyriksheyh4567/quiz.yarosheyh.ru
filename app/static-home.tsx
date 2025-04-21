@@ -43,9 +43,9 @@ export default function StaticHome() {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
             <div className="lg:w-1/2 text-center lg:text-left">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-                {t.home.hero.title} <br />
+                {t.home.hero.title.replace("Mind", "")} <br />
                 <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
-                  {language === "ru" ? "Разум" : "Mind"}
+                  {t.common.mind}
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-xl">
@@ -121,7 +121,7 @@ export default function StaticHome() {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-500/10 dark:from-purple-900/20 dark:to-blue-900/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800 dark:text-white">{t.home.cta.title}</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800 dark:text-white">{t.home.cta.title.replace("QuizWhiz", "")}</h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-10">{t.home.cta.subtitle}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -184,7 +184,7 @@ export default function StaticHome() {
           </div>
           <div className="mt-8 text-center text-gray-500 dark:text-gray-400">
             <p>
-              © {new Date().getFullYear()} {t.common.appName}. {t.footer.rights}
+              {new Date().getFullYear()} {t.common.appName}. {t.footer.rights}
             </p>
           </div>
         </div>
